@@ -9,6 +9,8 @@ app.use(express.json());
 const repositories = [];
 
 app.get("/repositories", (request, response) => {
+  const { user } = request
+
   return response.json(repositories);
 });
 
